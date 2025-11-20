@@ -1,0 +1,57 @@
+/* --------------------------------------------
+++++++++++++  Accordion Styling  ++++++++++++++
+---------------------------------------------*/
+
+.accordion__button {
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px;
+  text-align: left;
+  border: none;
+  user-select: none;
+}
+
+.accordion__button:hover {
+  background-color: #F5F5F5;
+}
+
+.accordion__button:before {
+  display: inline-block;
+  content: '';
+  height: 6px;
+  width: 6px;
+  margin-right: 12px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: rotate(-45deg);
+  transition: all .20s;
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+  transform: rotate(45deg);
+  transition: all .20s;
+}
+
+.accordion__panel {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+  padding-left: 32px;
+  width: 95%;
+  animation: fadein 0.30s ease-in;
+}
+
+h2 {
+  text-align: center;
+  color: #444;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

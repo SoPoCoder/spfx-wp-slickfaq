@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": false,
+    "nodeVersion": "22.14.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "intermed",
+    "libraryId": "e860385f-db8f-4977-8fca-7164a1bcacc4",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "Intermed",
+    "solutionShortDescription": "Intermed description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "useGulp": false,
+    "componentType": "webpart"
+  }
+}

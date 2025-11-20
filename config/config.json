@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "slick-faq-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/slickFaq/SlickFaqWebPart.js",
+          "manifest": "./src/webparts/slickFaq/SlickFaqWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "SlickFaqWebPartStrings": "lib/webparts/slickFaq/loc/{locale}.js"
+  }
+}

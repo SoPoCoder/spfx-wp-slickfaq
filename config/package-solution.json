@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "SlickFAQ",
+    "id": "e860385f-db8f-4977-8fca-7164a1bcacc4",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "iconPath": "images/AppIcon.png",
+    "developer": {
+      "name": "Scott Lyons",
+      "websiteUrl": "https://github.com/SoPoCoder/spfx-wp-slickfaq",
+      "privacyUrl": "",
+      "termsOfUseUrl": "https://github.com/SoPoCoder/spfx-wp-slickfaq?tab=MIT-1-ov-file",
+      "mpnId": "Undefined-1.17.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "FAQ webpart that saves questions/answers on the host page. FAQs are rearrangeable."
+      },
+      "longDescription": {
+        "default": "This webpart makes use of the react Accordion and SortableList components and allows page editors to enter FAQs from the host page itself, saving them as part of the page."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-wp-slickfaq Feature",
+        "description": "The feature that activates elements of the intermed solution.",
+        "id": "e8603c49-5dfc-4903-9c87-0910969d174b",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-wp-slickfaq.sppkg"
+  }
+}
