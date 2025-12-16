@@ -18,11 +18,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
     "group": { "default": "Advanced" },
-    "title": { "default": "SlickFaq" },
-    "description": { "default": "SlickFaq description" },
-    "officeFabricIconFontName": "Page",
+    "title": { "default": "Slick FAQ" },
+    "description": { "default": "Displays a list of FAQs as an accordion webpart. Content is search indexed with the host page." },
+    "officeFabricIconFontName": "DiffInline",
     "properties": {
-      "description": "SlickFaq"
+      "description": "Slick FAQ"
     }
   }]
 }
