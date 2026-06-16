@@ -42,7 +42,7 @@ export const SlickFaq: React.FunctionComponent<ISlickFaqProps> = (props: React.P
   }
 
   const SortableItem = SortableElement(({ item }: { item: IFaq }) => (
-    <AccordionItem key={item.Id} onClick={displayMode === DisplayMode.Edit && (() => setSelectedItemId(item.Id))}>
+    <AccordionItem key={item.Id} onClick={() => displayMode === DisplayMode.Edit && setSelectedItemId(item.Id)}>
       <AccordionItemHeading style={SelectedItemId === item.Id ? { color: theme.palette.themeSecondary } : { color: 'inherit' }}>
         <AccordionItemButton title={item.Question}>
           {item.Question}

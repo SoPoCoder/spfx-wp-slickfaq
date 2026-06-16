@@ -5,7 +5,7 @@
       "name": "Hosted workbench",
       "type": "msedge",
       "request": "launch",
-      "url": "https://intermed.sharepoint.com/sites/dev-team/_layouts/workbench.aspx",
+      "url": "https://{tenantDomain}/sites/dev-team/_layouts/workbench.aspx",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
@@ -19,9 +19,5 @@
         "-incognito"
       ]
     }
-  ],
-  "resolveSourceMapLocations": [
-    "${workspaceFolder}/**",
-    "!**/node_modules/**"
-  ]  
+  ]
 }

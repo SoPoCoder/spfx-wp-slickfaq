@@ -10,6 +10,7 @@ import {
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart, IWebPartPropertiesMetadata } from '@microsoft/sp-webpart-base';
 import { IFaq, ISlickFaqProps, SlickFaq } from './components/SlickFaq';
+import { PropertyPaneRichTextField } from './components/PropertyPaneRichTextField';
 
 
 export interface ISlickFaqWebPartProps {
@@ -31,7 +32,7 @@ export default class SlickFaqWebPart extends BaseClientSideWebPart<ISlickFaqWebP
     };
   }
 
-  private SelectedItemId: string = null;
+  private SelectedItemId: string = "";
 
   public render(): void {
 
@@ -92,7 +93,7 @@ export default class SlickFaqWebPart extends BaseClientSideWebPart<ISlickFaqWebP
   /* --------------------- Properties Panel --------------------- */
   /* ------------------------------------------------------------ */
 
-  protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
+  protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: unknown, newValue: unknown): void {
     this.updateSearchStrings();
     super.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
   }
@@ -108,18 +109,28 @@ export default class SlickFaqWebPart extends BaseClientSideWebPart<ISlickFaqWebP
           PropertyPaneTextField(`faqs[${index}].Question`, {
             label: "Question"
           }),
-          PropertyPaneTextField(`faqs[${index}].Answer`, {
+          PropertyPaneRichTextField({
+            key: "RichTextField" + index.toString(),
+            onRender: this.render.bind(this),
+            onDispose: this.dispose.bind(this),
             label: "Answer",
-            multiline: true,
-            rows: 10
+            value: this.properties.faqs[index].Answer,
+            onChange: (newValue: string) => {
+              this.properties.faqs[index].Answer = newValue;
+            }
           }),
+          // PropertyPaneTextField(`faqs[${index}].Answer`, {
+          //   label: "Answer",
+          //   multiline: true,
+          //   rows: 10
+          // }),
           PropertyPaneButton('', {
             text: "Delete",
             icon: "Delete",
             onClick: () => {
               this.properties.faqs = this.properties.faqs.filter(x => x.Id !== this.SelectedItemId);
               this.onPropertyPaneFieldChanged("faqs", null, this.properties.faqs);
-              this.SelectedItemId = null;
+              this.SelectedItemId = "";
               this.context.propertyPane.refresh();
               this.render();
             }

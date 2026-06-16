@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "SlickFAQ",
-    "id": "e860385f-db8f-4977-8fca-7164a1bcacc4",
+    "id": "d66e2bef-581a-4682-97bb-66ed31307d8a",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -12,15 +12,15 @@
       "name": "Scott Lyons",
       "websiteUrl": "https://github.com/SoPoCoder/spfx-wp-slickfaq",
       "privacyUrl": "",
-      "termsOfUseUrl": "https://github.com/SoPoCoder/spfx-wp-slickfaq?tab=MIT-1-ov-file",
-      "mpnId": "Undefined-1.17.1"
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.2"
     },
     "metadata": {
       "shortDescription": {
-        "default": "FAQ webpart that saves questions/answers on the host page. FAQs are rearrangeable."
+        "default": "Quickly add collapseable FAQs with rich text on page and included in search indexing"
       },
       "longDescription": {
-        "default": "This webpart makes use of the react Accordion and SortableList components and allows page editors to enter FAQs from the host page itself, saving them as part of the page."
+        "default": "This webpart makes use of the react Accordion, SortableList and Quill RTE components and allows page editors to enter FAQs from the host page itself, saving them as part of the page to be included in search indexing."
       },
       "screenshotPaths": [],
       "videoUrl": "",
@@ -29,8 +29,8 @@
     "features": [
       {
         "title": "spfx-wp-slickfaq Feature",
-        "description": "The feature that activates elements of the intermed solution.",
-        "id": "e8603c49-5dfc-4903-9c87-0910969d174b",
+        "description": "The feature that activates elements of the spfx-wp-slickfaq solution.",
+        "id": "e1caa8ba-2efb-4bb1-a7a7-5a15308e119c",
         "version": "1.0.0.0"
       }
     ]

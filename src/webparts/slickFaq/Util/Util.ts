@@ -6,20 +6,20 @@ export class Util {
         return uniqueId;
     }
 
-    public static CalculateNewSortWeight(arr: IFaq[], newIndex: number, oldIndex?: number):number {
+    public static CalculateNewSortWeight(arr: IFaq[], newIndex: number, oldIndex: number = 0):number {
         const links = arr ? [...arr].sort((a, b) => a.SortWeight - b.SortWeight) : [];
         if (newIndex === 0)
-            return this.GetAverage(null, links[0]?.SortWeight);
+            return this.GetAverage(0, links[0]?.SortWeight);
         if (newIndex === links.length)
-            return this.GetAverage(links[links.length - 1].SortWeight, null);
+            return this.GetAverage(links[links.length - 1].SortWeight, 1);
         if (newIndex < oldIndex)
             return this.GetAverage(links[newIndex - 1]?.SortWeight, links[newIndex]?.SortWeight)
         return this.GetAverage(links[newIndex]?.SortWeight, links[newIndex + 1]?.SortWeight)
     }
 
     private static GetAverage(prev: number, next: number):number {
-        prev = isNaN(prev) || prev === null ? 0 : prev;
-        next = isNaN(next) || next === null ? 1 : next;
+        //prev = isNaN(prev) || prev === null ? 0 : prev;
+        //next = isNaN(next) || next === null ? 1 : next;
         return (prev + next) / 2
     }
 }
