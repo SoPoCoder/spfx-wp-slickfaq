@@ -7,6 +7,7 @@
 - Webpart saves questions/answers in an array stored on the host page.
 - Title and FAQ array items are stored as strings on the page for search indexing.
 - Uses React Accordion and React Sortable HOC for drag and drop sorting of FAQs.
+- Uses Quill RTE for inputing rich text for FAQ answers.
 - Allow Zero Expand and Allow Multiple Expanded options available.
 
 ## Usage
@@ -36,9 +37,9 @@
 - Clone or download this repository
 - Run in command line:
   - `npm install` to install the npm dependencies
-  - `gulp serve` to display in Developer Workbench (recommend using your tenant workbench so you can test on your site)
+  - `heft start` to display in Developer Workbench (recommend using your tenant workbench so you can test on your site)
 - To package and deploy:
-  - Use `gulp bundle --ship` & `gulp package-solution --ship`
+  - Use `heft package-solution --ship`
   - Add the `.sppkg` to your SharePoint App Catalog
 
 ## Disclaimer
