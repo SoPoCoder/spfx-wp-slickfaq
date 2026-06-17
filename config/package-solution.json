@@ -22,7 +22,10 @@
       "longDescription": {
         "default": "This webpart makes use of the react Accordion, SortableList and Quill RTE components and allows page editors to enter FAQs from the host page itself, saving them as part of the page to be included in search indexing."
       },
-      "screenshotPaths": [],
+      "screenshotPaths": [
+        "images/Screenshot-1.png",
+        "images/Screenshot-2.png"
+      ],
       "videoUrl": "",
       "categories": []
     },

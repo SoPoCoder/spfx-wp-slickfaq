@@ -5,6 +5,7 @@ import {
   IPropertyPaneConfiguration,
   IPropertyPaneGroup,
   PropertyPaneButton,
+  PropertyPaneLabel,
   PropertyPaneTextField,
   PropertyPaneToggle
 } from '@microsoft/sp-property-pane';
@@ -124,6 +125,7 @@ export default class SlickFaqWebPart extends BaseClientSideWebPart<ISlickFaqWebP
           //   multiline: true,
           //   rows: 10
           // }),
+          PropertyPaneLabel('', { text: '' }),
           PropertyPaneButton('', {
             text: "Delete",
             icon: "Delete",
@@ -134,19 +136,11 @@ export default class SlickFaqWebPart extends BaseClientSideWebPart<ISlickFaqWebP
               this.context.propertyPane.refresh();
               this.render();
             }
-          }),
-          // PropertyPaneButton('', {
-          //   text: "Close",
-          //   icon: "Cancel",
-          //   onClick: () => {
-          //     this.SelectedItemId = null!;
-          //     this.context.propertyPane.refresh();
-          //     this.render();
-          //   }
-          // })
+          })
         ]
       })
     }
+
 
     propertyPaneGroups.push({
       groupName: "Layout options",

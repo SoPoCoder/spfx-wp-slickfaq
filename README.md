@@ -16,6 +16,9 @@
 2. Edit a SharePoint page and select the new Slick FAQ webpart.
 3. Configure the webpart, add FAQs and publish the page.
 
+![List 1 Example](./assets/Screenshot-1.png)
+![List 2 Example](./assets/Screenshot-2.png)
+
 ## Used SharePoint Framework Version
 
 | :warning: Important          |
